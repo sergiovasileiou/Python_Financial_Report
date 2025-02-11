@@ -82,6 +82,8 @@ The project requires you to perform the following tasks:
   - `highest_leverage`    – holds the company type with the highest average leverage ratio.
   - `relationship`        – holds the qualitative relationship for real estate companies ("positive", "negative", or "no relationship").
 
+![Screenshot 2025-02-11 162418](https://github.com/user-attachments/assets/f1fe9351-8425-4678-add3-d982f7481a9f)
+
 ## How to Run the Code
 
 1. Ensure that you have Python installed, along with the required packages:
