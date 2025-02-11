@@ -31,8 +31,7 @@ The project requires you to perform the following tasks:
 1. **Compute Financial Ratios:**
    - **Leverage Ratio:**  
      Use either:
-     - **Debt-to-Equity Ratio:** \( \text{Debt-to-Equity Ratio} = \frac{\text{Total Liab}}{\text{Total Stockholder Equity}} \), or  
-     - **Equity Multiplier Ratio:** \( \text{Equity Multiplier} = \frac{\text{Total Assets}}{\text{Total Stockholder Equity}} \)  
+     - **Debt-to-Equity Ratio:** \( \text{Debt-to-Equity Ratio} = \frac{\text{Total Liab}}{\text{Total Stockholder Equity}} \) 
      
      The computed value is stored in a column named `leverage_ratio` in a DataFrame called `df_ratios`.
 
@@ -56,7 +55,7 @@ The project requires you to perform the following tasks:
 
 ### 2. Computing Financial Ratios
 - **Leverage Ratio:**  
-  Compute the ratio using the formula \( \text{Equity Multiplier} = \frac{\text{Total Assets}}{\text{Total Stockholder Equity}} \) (or alternatively a debt-to-equity ratio) and add this as a new column named `leverage_ratio`.
+  Compute the ratio using the formula \( \text{Equity Multiplier} = \frac{\text{Total Assets}}{\text{Total Stockholder Equity}} \)
   
 - **Profitability Ratio:**  
   Compute the ratio using the formula \( \text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}} \) and add this as a new column named `profitability_ratio`.
