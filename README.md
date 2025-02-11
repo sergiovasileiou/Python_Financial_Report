@@ -86,7 +86,6 @@ The project requires you to perform the following tasks:
 
 1. Ensure that you have Python installed, along with the required packages:
    - `pandas`
-   - `seaborn`
    - `matplotlib`
 2. Place the provided Excel files (`Income_Statement.xlsx` and `Balance_Sheet.xlsx`) in the same directory as your script.
 3. Run the Python script. The script will read the Excel files, merge the data, compute the ratios, produce the regression plot for real estate companies, and print out the final results.
