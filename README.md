@@ -79,7 +79,7 @@ This project involves analyzing financial data from two Excel files: **Income_St
 ## 🚀 How to Run the Code
 
 1. **Environment Setup**:  
-   Ensure that Python and the required libraries (`pandas`, `matplotlib`, and `seaborn`) are installed. Install them via pip if necessary:
+   Ensure that Python and the required libraries (`pandas` and `matplotlib`) are installed. Install them via pip if necessary:
 
 2. **File Preparation**:  
 Place **Income_Statement.xlsx** and **Balance_Sheet.xlsx** in the same directory as your Python script.
