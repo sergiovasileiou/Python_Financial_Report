@@ -1,6 +1,6 @@
 # 📊 Financial Ratios Analysis Project
 
-👨‍💻 **Author**  
+##👨‍💻 **Author**  
 Sergios Vasileiou
 
 ## 🔎 Overview
@@ -73,6 +73,7 @@ This project involves analyzing financial data from two Excel files: **Income_St
      - `lowest_profitability`
      - `highest_leverage`
      - `relationship`
+       
 ![Screenshot 2025-02-11 162418](https://github.com/user-attachments/assets/f1fe9351-8425-4678-add3-d982f7481a9f)
 
 ## 🚀 How to Run the Code
@@ -92,4 +93,4 @@ Run your Python script. The script will:
 
 ## 📈 Conclusion
 
-This project effectively integrates income statement and balance sheet data to compute critical financial ratios and generate actionable insights by industry. It not only highlights which sectors exhibit extreme leverage and profitability but also explores the dynamic relationship between these metrics in real estate companies. This analysis provides managers with valuable information for informed decision-making.
+This project effectively integrates an income statement and a balance sheet data to ucnover critical financial ratios and generate actionable insights by industry. It highlights which sectors exhibit extreme leverage and profitability but also explores the dynamic relationship between these metrics. Such analysis provides managers with valuable information for informed decision-making.
