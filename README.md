@@ -1,6 +1,6 @@
 # 📊 Financial Ratios Analysis Project
 
-##👨‍💻 **Author**  
+## 👨‍💻 **Author**  
 Sergios Vasileiou
 
 ## 🔎 Overview
