@@ -1,97 +1,95 @@
-# Financial Ratios Analysis Project
+# 📊 Financial Ratios Analysis Project
 
-## Overview
+👨‍💻 **Author**  
+Sergios Vasileiou
 
-This project involves analyzing financial data provided in two Excel files (`Income_Statement.xlsx` and `Balance_Sheet.xlsx`). The goal is to compute key financial ratios and use them to generate insights for the manager. Specifically, the project focuses on calculating a leverage ratio and a profitability ratio, grouping these ratios by industry (denoted by the `comp_type` field), and then answering three specific questions regarding which company type exhibits the lowest profitability, the highest leverage, and the nature of the relationship between leverage and profitability for real estate companies.
+## 🔎 Overview
 
-## Data Files
+This project involves analyzing financial data from two Excel files: **Income_Statement.xlsx** and **Balance_Sheet.xlsx**. The goal is to compute key financial ratios, group them by industry (using the `comp_type` field), and answer specific business questions. The analysis focuses on identifying:
 
-- **Income_Statement.xlsx**  
-  Contains income statement data, including:
-  - Year
-  - Company type (`comp_type`)
-  - Company name (`company`)
-  - Cost Of Goods Sold
-  - Gross Profit
-  - Operating Income
-  - Total Operating Expenses
-  - Total Revenue
+- The company type with the lowest profitability ratio.
+- The company type with the highest leverage ratio.
+- The relationship between leverage and profitability for real estate companies.
 
-- **Balance_Sheet.xlsx**  
-  Contains balance sheet data, including:
-  - Year
-  - Company type (`comp_type`)
-  - Company name (`company`)
-  - Various balance sheet items such as Total Assets, Total Liabilities, and Total Stockholder Equity, among others
+## 🔑 Key Features
 
-## Problem Description
+- **Data Files**:  
+  - *Income_Statement.xlsx*: Contains income statement data such as `Gross Profit`, `Total Revenue`, and `Operating Income`.  
+  - *Balance_Sheet.xlsx*: Includes balance sheet data such as `Total Assets`, `Total Liabilities`, and `Total Stockholder Equity`.
 
-The project requires you to perform the following tasks:
+- **Financial Ratios Computed**:  
+  - **Leverage Ratio**:  
+    Computed as the Debt-to-Equity ratio:  
+    \[
+    \text{Debt-to-Equity Ratio} = \frac{\text{Total Liabilities}}{\text{Total Stockholder Equity}}
+    \]
+    This value is stored in a column named `leverage_ratio`.  
 
-1. **Compute Financial Ratios:**
-   - **Leverage Ratio:**  
-     Use either:
-     - **Debt-to-Equity Ratio:** \( \text{Debt-to-Equity Ratio} = \frac{\text{Total Liab}}{\text{Total Stockholder Equity}} \) 
-     
-     The computed value is stored in a column named `leverage_ratio` in a DataFrame called `df_ratios`.
+  - **Profitability Ratio**:  
+    Computed as the Gross Margin Ratio:  
+    \[
+    \text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}}
+    \]
+    This value is stored in a column named `profitability_ratio`.
 
-   - **Profitability Ratio:**  
-     Use either:
-     - **Gross Margin Ratio:** \( \text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}} \), or
-     - **Operating Margin Ratio** (if preferred)  
-     
-     The computed value is stored in a column named `profitability_ratio` in the same `df_ratios` DataFrame.
+- **Insights Generated**:  
+  - Identification of the company type with the lowest average profitability ratio (stored in `lowest_profitability`).
+  - Determination of the company type with the highest average leverage ratio (stored in `highest_leverage`).
+  - Analysis of the relationship between leverage and profitability for real estate companies, evaluated using Pearson's correlation coefficient and stored in `relationship` as "positive", "negative", or "no relationship".
 
-2. **Answer the Following Questions:**
-   - Which company type (`comp_type`) has the **lowest profitability ratio**? Save this value as a string in a variable called `lowest_profitability`.
-   - Which company type has the **highest leverage ratio**? Save this value as a string in a variable called `highest_leverage`.
-   - What is the relationship between leverage and profitability for **real estate** companies? Determine if the relationship is `"positive"`, `"negative"`, or `"no relationship"`, and store the result in a variable called `relationship`.
+## 🛠️ Technologies Used
 
-## Approach and Implementation Steps
+- **Python**
+- **pandas**: For data manipulation and merging.
+- **matplotlib** & **seaborn**: For data visualization.
 
-### 1. Importing and Merging Data
-- **Import** the required Excel files using `pandas.read_excel()`.
-- **Merge** the `Income_Statement.xlsx` and `Balance_Sheet.xlsx` datasets on common keys, including `company`, `Year`, and `comp_type`, to ensure a complete dataset with both income and balance sheet measures.
+## 🏁 Getting Started
 
-### 2. Computing Financial Ratios
-- **Leverage Ratio:**  
-  Compute the ratio using the formula \( \text{Equity Multiplier} = \frac{\text{Total Assets}}{\text{Total Stockholder Equity}} \)
-  
-- **Profitability Ratio:**  
-  Compute the ratio using the formula \( \text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}} \) and add this as a new column named `profitability_ratio`.
+1. **Data Import and Merging**:  
+   - Use `pandas.read_excel()` to import the Excel files.  
+   - Merge the datasets on `Year`, `Company`, and `comp_type` to create a complete dataset with both income and balance sheet measures.
 
-### 3. Grouping and Analyzing Data by Company Type
-- **Group** the data by the `comp_type` field using a pivot table to get the average leverage and profitability ratios for each company type.
-- **Extract**:
-  - The company type with the lowest average profitability ratio (stored in `lowest_profitability`).
-  - The company type with the highest average leverage ratio (stored in `highest_leverage`).
+2. **Computing Financial Ratios**:  
+   - **Leverage Ratio**: Compute using the Debt-to-Equity formula.  
+   - **Profitability Ratio**: Compute using the Gross Margin formula.
 
-### 4. Analyzing the Relationship for Real Estate Companies
-- **Filter** the dataset for real estate companies (where `comp_type` is typically `"real_est"`).
-- **Visualize** the relationship between leverage and profitability via a scatter plot with a regression line (using tools like Seaborn) to inspect the trend.
-- **Compute** the Pearson correlation coefficient between the two ratios:
-  - If the correlation coefficient is positive, the relationship is `"positive"`.
-  - If negative, the relationship is `"negative"`.
-  - If near zero, the relationship is `"no relationship"`.
-- Store the result in the variable `relationship`.
+3. **Grouping and Analysis by Industry**:  
+   - Group the merged data by the `comp_type` field using a pivot table to calculate average ratios for each company type.
+   - Extract the key insights:
+     - `lowest_profitability`: The company type with the lowest average profitability ratio.
+     - `highest_leverage`: The company type with the highest average leverage ratio.
 
-### 5. Final Outputs
-- The required outputs are stored in the following variables:
-  - `lowest_profitability` – holds the company type with the lowest average profitability ratio.
-  - `highest_leverage`    – holds the company type with the highest average leverage ratio.
-  - `relationship`        – holds the qualitative relationship for real estate companies ("positive", "negative", or "no relationship").
+4. **Analyzing Real Estate Companies**:  
+   - Filter the dataset where `comp_type` is "real_est".  
+   - Visualize the relationship between leverage and profitability using a scatter plot with a regression line.  
+   - Compute the Pearson correlation coefficient to determine the relationship:
+     - If positive, the relationship is "positive".
+     - If negative, the relationship is "negative".
+     - If near zero, the relationship is "no relationship".
+   - Store this result in the variable `relationship`.
 
+5. **Final Outputs**:  
+   - The project stores the computed key outputs in the variables:
+     - `lowest_profitability`
+     - `highest_leverage`
+     - `relationship`
 ![Screenshot 2025-02-11 162418](https://github.com/user-attachments/assets/f1fe9351-8425-4678-add3-d982f7481a9f)
 
-## How to Run the Code
+## 🚀 How to Run the Code
 
-1. Ensure that you have Python installed, along with the required packages:
-   - `pandas`
-   - `matplotlib`
-2. Place the provided Excel files (`Income_Statement.xlsx` and `Balance_Sheet.xlsx`) in the same directory as your script.
-3. Run the Python script. The script will read the Excel files, merge the data, compute the ratios, produce the regression plot for real estate companies, and print out the final results.
+1. **Environment Setup**:  
+   Ensure that Python and the required libraries (`pandas`, `matplotlib`, and `seaborn`) are installed. Install them via pip if necessary:
 
-## Conclusion
+2. **File Preparation**:  
+Place **Income_Statement.xlsx** and **Balance_Sheet.xlsx** in the same directory as your Python script.
 
-This project efficiently combines income and balance sheet data, computes critical financial ratios, and groups the results by industry to generate actionable insights. The analysis highlights which sectors demonstrate extreme leverage and profitability measures, as well as the relationship between these metrics among real estate companies.
+3. **Execute the Script**:  
+Run your Python script. The script will:
+- Read and merge the data.
+- Compute the financial ratios.
+- Generate the regression plot for real estate companies.
+- Print out the final insights.
 
+## 📈 Conclusion
+
+This project effectively integrates income statement and balance sheet data to compute critical financial ratios and generate actionable insights by industry. It not only highlights which sectors exhibit extreme leverage and profitability but also explores the dynamic relationship between these metrics in real estate companies. This analysis provides managers with valuable information for informed decision-making.
