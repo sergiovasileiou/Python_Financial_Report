@@ -22,18 +22,14 @@ This project involves analyzing financial data from two Excel files: **Income_St
 ### Leverage Ratio (Debt-to-Equity)
 The **Debt-to-Equity Ratio** measures a company's financial leverage and is calculated as:
 
-\[
-\text{Debt-to-Equity Ratio} = \frac{\text{Total Liabilities}}{\text{Total Stockholder Equity}}
-\]
+**Debt-to-Equity Ratio** = Total Liabilities / Total Stockholder Equity
 
 - This value is stored in the column: **`leverage_ratio`**.
 
 ### Profitability Ratio (Gross Margin)
 The **Gross Margin Ratio** evaluates a company's profitability and is computed as:
 
-\[
-\text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}}
-\]
+**Gross Margin Ratio** = Gross Profit / Total Revenue
 
 - This value is stored in the column: **`profitability_ratio`**.
 
