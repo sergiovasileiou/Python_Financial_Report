@@ -17,20 +17,26 @@ This project involves analyzing financial data from two Excel files: **Income_St
   - *Income_Statement.xlsx*: Contains income statement data such as `Gross Profit`, `Total Revenue`, and `Operating Income`.  
   - *Balance_Sheet.xlsx*: Includes balance sheet data such as `Total Assets`, `Total Liabilities`, and `Total Stockholder Equity`.
 
-- **Financial Ratios Computed**:  
-  - **Leverage Ratio**:  
-    Computed as the Debt-to-Equity ratio:  
-    \[
-    \text{Debt-to-Equity Ratio} = \frac{\text{Total Liabilities}}{\text{Total Stockholder Equity}}
-    \]
-    This value is stored in a column named `leverage_ratio`.  
+## Financial Ratios Computed
 
-  - **Profitability Ratio**:  
-    Computed as the Gross Margin Ratio:  
-    \[
-    \text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}}
-    \]
-    This value is stored in a column named `profitability_ratio`.
+### Leverage Ratio (Debt-to-Equity)
+The **Debt-to-Equity Ratio** measures a company's financial leverage and is calculated as:
+
+\[
+\text{Debt-to-Equity Ratio} = \frac{\text{Total Liabilities}}{\text{Total Stockholder Equity}}
+\]
+
+- This value is stored in the column: **`leverage_ratio`**.
+
+### Profitability Ratio (Gross Margin)
+The **Gross Margin Ratio** evaluates a company's profitability and is computed as:
+
+\[
+\text{Gross Margin Ratio} = \frac{\text{Gross Profit}}{\text{Total Revenue}}
+\]
+
+- This value is stored in the column: **`profitability_ratio`**.
+
 
 - **Insights Generated**:  
   - Identification of the company type with the lowest average profitability ratio (stored in `lowest_profitability`).
